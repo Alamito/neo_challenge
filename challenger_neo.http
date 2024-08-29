@@ -1,0 +1,6 @@
+@challenger_neo_HostAddress = http://localhost:5043
+
+GET {{challenger_neo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
