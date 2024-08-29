@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("challenger_neo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfaf9cd8d4d6c38744cd3c1019cb6024c76ba217")]
 [assembly: System.Reflection.AssemblyProductAttribute("challenger_neo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("challenger_neo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
