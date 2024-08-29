@@ -31,3 +31,4 @@ C:\Users\Alamito\Desktop\project_web\challenger_neo\obj\Debug\net8.0\refint\chal
 C:\Users\Alamito\Desktop\project_web\challenger_neo\obj\Debug\net8.0\challenger_neo.pdb
 C:\Users\Alamito\Desktop\project_web\challenger_neo\obj\Debug\net8.0\challenger_neo.genruntimeconfig.cache
 C:\Users\Alamito\Desktop\project_web\challenger_neo\obj\Debug\net8.0\ref\challenger_neo.dll
+C:\Users\Alamito\Desktop\project_web\challenger_neo\obj\Debug\net8.0\challenger_neo.sourcelink.json

@@ -465,9 +465,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alamito\\Desktop\\project_web\\challenger_neo\\challenger_neo.csproj",
-      "projectName": "challenger_neo",
-      "projectPath": "C:\\Users\\Alamito\\Desktop\\project_web\\challenger_neo\\challenger_neo.csproj",
+      "projectUniqueName": "C:\\Users\\Alamito\\Desktop\\project_web\\challenger_neo\\ChallengeNeo.csproj",
+      "projectName": "ChallengeNeo",
+      "projectPath": "C:\\Users\\Alamito\\Desktop\\project_web\\challenger_neo\\ChallengeNeo.csproj",
       "packagesPath": "C:\\Users\\Alamito\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Alamito\\Desktop\\project_web\\challenger_neo\\obj\\",
       "projectStyle": "PackageReference",
