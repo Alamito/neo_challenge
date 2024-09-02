@@ -14,8 +14,8 @@ namespace ChallengeNeo.Controllers
     [Route("api/[controller]")]
     public class OrdersController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetOrders()
+        [HttpGet("{id}")]
+        public IActionResult GetOrders(int id)
         {
             string filePath = "data/Orders.json";
 
@@ -34,7 +34,19 @@ namespace ChallengeNeo.Controllers
 
             string productionOrdersJSON = JsonConvert.SerializeObject(productionOrders, Formatting.Indented);
 
-            return Ok(productionOrdersJSON);
+            foreach (var order in productionOrders)
+            {
+                if (order.OrderId == id)
+                {
+                    return Ok(order);
+                }
+            }
+
+            var response = new
+            {
+                message = "Order ID not found"
+            };
+            return NotFound(response);
         }
 
         [HttpPost]
