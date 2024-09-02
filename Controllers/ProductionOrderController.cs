@@ -16,8 +16,24 @@ namespace ChallengeNeo.Controllers
 		[HttpGet]
 		public IActionResult GetProductionOrder()
 		{
-			var response = new { message = "Production Order" };
-			return Ok(response);
+            string filePath = "data/productionOrder.json";
+
+            List<ProductionOrder> productionOrders;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                string jsonString = System.IO.File.ReadAllText(filePath);
+
+				productionOrders = JsonConvert.DeserializeObject<List<ProductionOrder>>(jsonString) ?? new List<ProductionOrder>(); ;
+            }
+            else
+            {
+                productionOrders = new List<ProductionOrder>();
+            }
+
+            string productionOrdersJSON = JsonConvert.SerializeObject(productionOrders, Formatting.Indented);
+
+			return Ok(productionOrdersJSON);
 		}
 
 		[HttpPost]
