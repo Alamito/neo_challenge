@@ -82,7 +82,7 @@ namespace ChallengeNeo.Controllers
 			if (System.IO.File.Exists(filePath))
 			{
 				System.IO.File.WriteAllText(filePath, string.Empty);
-				return Ok(new { message = "File content cleared successfully." });
+				return Ok();
 			}
 			else
 			{
