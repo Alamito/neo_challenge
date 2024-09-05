@@ -14,11 +14,39 @@ namespace ChallengeNeo.Controllers
     [Route("api/[controller]")]
     public class AppointmentsController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult GetAppointment(int id)
         {
-            var response = new { message = "Hello World" };
-            return Ok(response);
+            string filePath = "data/appointments.json";
+
+            List<Appointment> appointments;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                string jsonString = System.IO.File.ReadAllText(filePath);
+
+                appointments = JsonConvert.DeserializeObject<List<Appointment>>(jsonString) ?? new List<Appointment>();
+            }
+            else
+            {
+                appointments = new List<Appointment>();
+            }
+
+            string appointmentsJSON = JsonConvert.SerializeObject(appointments, Formatting.Indented);
+
+            foreach (var a in appointments)
+            {
+                if (a.OrderId == id)
+                {
+                    return Ok(a);
+                }
+            }
+
+            var response = new
+            {
+                message = "Order ID not found"
+            };
+            return NotFound(response);
         }
 
         [HttpPost]
@@ -108,12 +136,12 @@ namespace ChallengeNeo.Controllers
         [HttpDelete]
         public IActionResult DeleteAppointment()
         {
-            string filePath = "data/Orders.json";
+            string filePath = "data/appointments.json";
 
             if (System.IO.File.Exists(filePath))
             {
                 System.IO.File.WriteAllText(filePath, string.Empty);
-                return Ok(new { message = "File content cleared successfully." });
+                return Ok();
             }
             else
             {
