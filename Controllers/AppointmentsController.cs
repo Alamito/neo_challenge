@@ -71,7 +71,6 @@ namespace ChallengeNeo.Controllers
 
             for (int i = 2; i <= rowsAppointment; i++)
             {
-                Console.WriteLine("i: " + i);
                 bool existOrder = false;
                 int orderNumberAppointment = int.Parse(wsAppointment.Cell(i, 1).Value.ToString());
 
