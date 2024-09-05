@@ -60,13 +60,6 @@ namespace ChallengeNeo.Controllers
             var rows = ws.LastRowUsed().RowNumber();
             var columnCount = ws.LastColumnUsed().ColumnNumber();
 
-            List<string> data = new List<string>();
-
-            for (int i = 0; i < columnCount; i++)
-            {
-                data.Add(ws.Cell(1, i + 1).Value.ToString());
-            }
-
             List<ProductionOrder> productionOrders = new List<ProductionOrder>();
             int countOrders = 0;
 
